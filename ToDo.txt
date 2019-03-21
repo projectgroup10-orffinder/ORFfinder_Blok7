@@ -1,1 +1,4 @@
-ToDo List for the application
+* reverse strand implementen (orientatie: 1 voor forward, -1 voor 
+reverse) 
+* panels maken per onderdeel
+* BLAST kunnen uitvoeren (uiteindelijk ook geautomatiseerd)
