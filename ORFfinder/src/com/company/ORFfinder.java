@@ -1,4 +1,4 @@
-package app;
+package com.company;
 
 /**
  * @author: Tjeerd van der Veen & Sanne Schroduer
@@ -6,8 +6,9 @@ package app;
 
 import javax.swing.*;
 import java.io.*;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 
 public class ORFfinder {
@@ -16,8 +17,8 @@ public class ORFfinder {
     static BufferedWriter bw;
     static String sequence;
 
-    private static ArrayList<ArrayList<Integer>> orfs, reverseORFs;
-    static HashMap<Integer, ArrayList<String>> resultsMap;
+    private static ArrayList<ArrayList<Integer>> orfs;
+    private static HashMap<Integer, ArrayList<String>> resultsMap;
     private static HashMap<String, String> CodonTable = new HashMap<>();
 
     public static void main(String[] args) {
@@ -31,9 +32,7 @@ public class ORFfinder {
 
         frame.setTitle("ORF finder application");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         frame.pack();
-        frame.setSize(1000,800);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
@@ -69,7 +68,7 @@ public class ORFfinder {
     }
 
     /**
-     * extracts sequence from file
+     *
      * @param fileName
      * @return
      */
@@ -103,15 +102,11 @@ public class ORFfinder {
 
         //int DNA_Hashcode = DNA.hashCode();
         orfs = new ArrayList<>();
-        reverseORFs = new ArrayList<>();
+
         orfs = findORFs(sequence, orfs,  0, 75, startIsATG);
-        String reverseSequence = reverseString(sequence);
-        reverseORFs = findORFs(reverseSequence, reverseORFs,  0, 75, startIsATG);
+
         ArrayList DNA_ORF_List = getORF_DNA_Sequence(orfs, sequence);
-        DNA_ORF_List.addAll(getORF_DNA_Sequence(reverseORFs, reverseSequence));
         ArrayList proteinList=DNAtoAA(CodonTable, DNA_ORF_List);
-        reverseORFs = adjustReverseOrfs(sequence.length(), reverseORFs);
-        orfs.addAll(reverseORFs);
         resultsMap = fillResultsMap(proteinList, DNA_ORF_List, orfs);
 
         return resultsMap;
@@ -127,6 +122,7 @@ public class ORFfinder {
      * @return returns an ArrayList containing an ArrayList of the starting and stopping positions of the found ORFs
      */
     public static ArrayList findORFs(String sequence, ArrayList orfs, int start, int minDistance, boolean startIsATG){
+        System.out.println("findORFS");
 
         int startIndex=start;
 
@@ -206,6 +202,7 @@ public class ORFfinder {
      * @return returns an ArrayList with the DNA sequences of the ORFs found in the DNA sequence
      */
     static ArrayList getORF_DNA_Sequence(ArrayList<ArrayList<Integer>> orfs, String DNA){
+
         ArrayList<String> DNA_ORF_List = new ArrayList<>();
         orfs.stream().forEach((temp) -> {//streams the orf list and adds the DNA sequence of the ORFs into the DNA_ORF_List
             DNA_ORF_List.add(DNA.substring(temp.get(0), temp.get(1)));
@@ -263,16 +260,10 @@ public class ORFfinder {
 
     static void exportORFtoCSV() {
         try {
-            outputFile = new File("C:\\Users\\sschr\\OneDrive\\Documenten\\ORFfinder_foundORFs.csv");
+            outputFile = new File("C:\\Users\\sschr\\OneDrive\\Documenten\\Related Genes.csv");
             bw = new BufferedWriter(new FileWriter(outputFile));
-            bw.write("Start position"+ ", " + "Stop position"+ ","+ "DNA sequence" + ","+ "Amino acid sequence" + "\n");
-
-
-            for(ArrayList value : resultsMap.values()) {
-                String ORF = String.join(",", value+"\n");
-                bw.write(ORF);
-            }
-            //for (resultsMap.entry<Integer, Object> entry : resultsMap.entrySet()) {
+            bw.write("ORF ID" + ", "+ "DNA sequence"+ ", " + "Start position"+ ", " + "Stop position"+  "\n");
+            //for (resultsMap.Entry<String, Object> entry : resultsMap.entrySet()) {
                 //String key = entry.getKey();
                 //Object value = entry.getValue();
                 // ...
@@ -294,44 +285,4 @@ public class ORFfinder {
     static void exportProteinstoCSV() {
 
     }
-
-    /**
-     *
-     * @param input
-     */
-    private static String reverseString(String input) {
-        char[] toRevert = input.toCharArray();
-        ArrayList<Character> reversedList = new ArrayList<>();
-        for (char i : toRevert){
-            char x;
-            if(i=='T'){
-                x='A';
-            }else if(i=='A'){
-                x='T';
-            }else if (i=='G'){
-                x='C';
-            }else if(i=='C'){
-                x='G';
-            }else{
-                x='N';
-            }
-            reversedList.add(x);
-        }
-        Collections.reverse(reversedList);
-
-        return reversedList.stream().map(String::valueOf).collect(Collectors.joining());
-    }
-
-    private static ArrayList<ArrayList<Integer>> adjustReverseOrfs(int sequenceLenght, ArrayList<ArrayList<Integer>> ORFlist){
-        for(int i=0; i<ORFlist.size(); i++){
-            int start = ORFlist.get(i).get(0)-sequenceLenght;
-            int stop = ORFlist.get(i).get(1)-sequenceLenght;
-            ArrayList<Integer> startStopList = new ArrayList<>();
-            startStopList.add(start);
-            startStopList.add(stop);
-            ORFlist.set(i, startStopList);
-        }
-        return ORFlist;
-    }
-
 }
