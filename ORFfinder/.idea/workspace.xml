@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state relative-caret-position="3734">
+              <caret line="329" column="104" selection-start-line="329" selection-start-column="104" selection-end-line="329" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,8 +81,8 @@
         <option value="$USER_HOME$/Downloads/orf finder java" />
         <option value="$PROJECT_DIR$/src/main/java/app/codonTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
       </list>
     </option>
   </component>
@@ -126,47 +126,6 @@
             <path>
               <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="orfGUI" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -249,12 +208,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549542971960</updated>
-      <workItem from="1553087236584" duration="7043000" />
+      <workItem from="1553087236584" duration="11052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9391000" />
+    <option name="totallyTimeSpent" value="13400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -279,7 +238,7 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21324718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20401855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="3734">
+          <caret line="329" column="104" selection-start-line="329" selection-start-column="104" selection-end-line="329" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -69,7 +69,7 @@ public class ORFfinder {
     }
 
     /**
-     * extracts sequence from file
+     *
      * @param fileName
      * @return
      */
@@ -93,6 +93,7 @@ public class ORFfinder {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("File read");
         return sequence;
     }
 
@@ -127,25 +128,25 @@ public class ORFfinder {
      * @return returns an ArrayList containing an ArrayList of the starting and stopping positions of the found ORFs
      */
     public static ArrayList findORFs(String sequence, ArrayList orfs, int start, int minDistance, boolean startIsATG){
-
-        int startIndex=start;
-
-        if(startIsATG){//checks if ATG is used as the starting point
-            startIndex=sequence.indexOf("ATG",start);
+        int startIndex = start;
+        int[] stops = {sequence.indexOf("TAA", startIndex), sequence.indexOf("TGA", startIndex), sequence.indexOf("TAG", startIndex)};
+        System.out.println(Arrays.toString(stops));
+        while (stops[0]!=-1 && stops[1]!=-1 && stops[2]!=-1) {//checks if there are any stop codons found
+            startIndex = start;
+            if (startIsATG) {//checks if ATG is used as the starting point
+                startIndex = sequence.indexOf("ATG", start);
+            }
+            int[] stopsTemp = {sequence.indexOf("TAA", startIndex), sequence.indexOf("TGA", startIndex), sequence.indexOf("TAG", startIndex)};
+            stops = stopsTemp;
+            Arrays.sort(stops);//sort the indexes of stop codons so the lowest and highest values are identified
+            if (!startIsATG) {//checks if ATG is not used as the starting point
+                startIndex = stops[0];
+            }
+            if (stops[0] != -1 && stops[1] != -1 && stops[2] != -1) {//checks if there are any stop codons found
+                checkORFLength(startIndex, stops[2], stops[1], stops[0], minDistance, sequence, orfs);//checks if the ORF is long enough and in the stop codons are in the right reading frame
+                start = startIndex + 1;
+            }
         }
-        int[] stops={sequence.indexOf("TAA",startIndex),sequence.indexOf("TGA",startIndex),sequence.indexOf("TAG",startIndex)};
-        Arrays.sort(stops);//sort the indexes of stop codons so the lowest and highest values are identified
-
-        if(!startIsATG){//checks if ATG is not used as the starting point
-            startIndex=stops[0];
-        }
-        if(stops[0]!=-1 && stops[1]!=-1 && stops[2]!=-1){//checks if there are any stop codons found
-            checkORFLength(startIndex, stops[2], stops[1], stops[0], minDistance, sequence, orfs);//checks if the ORF is long enough and in the stop codons are in the right reading frame
-            //start recurssion
-            start=startIndex+1;
-            orfs=findORFs(sequence, orfs, start, minDistance, startIsATG);
-        }
-
         return orfs;
     }
 
@@ -296,8 +297,9 @@ public class ORFfinder {
     }
 
     /**
-     *
-     * @param input
+     * reverses DNA to the reverse complementary sequence
+     * @param input string to be reversed
+     * @return returns a String that is the reversed complementary DNA sequence of the input String
      */
     private static String reverseString(String input) {
         char[] toRevert = input.toCharArray();
@@ -318,10 +320,15 @@ public class ORFfinder {
             reversedList.add(x);
         }
         Collections.reverse(reversedList);
-
         return reversedList.stream().map(String::valueOf).collect(Collectors.joining());
     }
 
+    /**
+     * adjusts ORF start and stop possition according to their possition on reverse contemplary sequence
+     * @param sequenceLenght length of the DNA sequence
+     * @param ORFlist list of ORFs to be adjusted
+     * @return Arraylist containing arraylist with the adjusted start and stop values of the given list.
+     */
     private static ArrayList<ArrayList<Integer>> adjustReverseOrfs(int sequenceLenght, ArrayList<ArrayList<Integer>> ORFlist){
         for(int i=0; i<ORFlist.size(); i++){
             int start = ORFlist.get(i).get(0)-sequenceLenght;
