@@ -1,4 +1,2 @@
-* reverse strand implementen (orientatie: 1 voor forward, -1 voor 
-reverse) 
-* panels maken per onderdeel
+* Exception handling
 * BLAST kunnen uitvoeren (uiteindelijk ook geautomatiseerd)
