@@ -9,7 +9,7 @@ import java.util.HashMap;
  * This class sets up the codon tabel which is used to translate the DNA sequences to aminoacid sequences
  */
 public class codonTable {
-    
+
     /**
      * Method that initiates a CodonTable as hashmap
      * @param CodonTable HashMap you want to put the codon table in (<String, String>)

@@ -3,6 +3,9 @@ package app;
 /**
  * @author: Tjeerd van der Veen & Sanne Schroduer
  * @date: 29-03-2019
+ *
+ * Note: known bug for choosing the directory for locally saving a CSV file with ORF results.
+ * The implemented exception handling for this method only works properly on Windows OS.
  */
 
 
@@ -337,6 +340,7 @@ public class ORFfinder {
     /**
      * Method that exports the found ORF's to a CSV file and saves it locally on the user's computer
      * @param directory String of chosen directory
+     * @// TODO: Make method generic for Windows and Linux OS
      */
     static void exportORFtoCSV(String directory) {
         try {
