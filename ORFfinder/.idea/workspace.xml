@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c594dac0-da14-4c96-bea5-349e23809195" name="Default Changelist" comment="" />
+    <list default="true" id="c594dac0-da14-4c96-bea5-349e23809195" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ORFfinder.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/orfGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/orfGUI.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -9,6 +14,16 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-378908790">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -23,16 +38,17 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+            <state relative-caret-position="204">
+              <caret line="48" column="144" selection-start-line="48" selection-start-column="144" selection-end-line="48" selection-end-column="144" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4078#4079#0" expanded="true" />
                 <element signature="e#4136#4137#0" expanded="true" />
               </folding>
             </state>
@@ -42,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="544">
               <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -72,15 +88,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -99,6 +106,9 @@
       <find>findORFs</find>
       <find>system</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -120,6 +130,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -138,12 +154,13 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1043" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1044" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -186,13 +203,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553007811160" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Mijn documenten" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553089517256" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -243,6 +262,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.NCBIQBlastServiceDemo" />
+      <item itemvalue="Application.ORFfinder" />
+      <item itemvalue="Application.main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ORFfinder" />
@@ -261,8 +285,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549542971960</updated>
+      <workItem from="1553088453066" duration="1643000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1643000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,27 +302,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13422818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18291761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26770538" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26657826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32719547" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -333,6 +364,12 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Copy Dropbox/Informatica/Blok 5/Afvink5/1819-owe5a-afvinkopdracht5-SanneSchroduer/Afvinkopdracht_5/src/afvinkopdracht_5/Afvinkopdracht_5.java" />
     <entry file="file://$PROJECT_DIR$/../Copy Dropbox/Informatica/Blok 5/Afvink5/1819-owe5a-afvinkopdracht5-SanneSchroduer/Afvinkopdracht_5/src/afvinkopdracht_5/GUI.java" />
@@ -355,27 +392,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/1819-bi6a-eindopdracht-SanneSchroduer/src/com/company/pmGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/1819-bi6a-eindopdracht-SanneSchroduer/src/com/company/pmGUI.java" />
-    <entry file="file://$USER_HOME$/Downloads/orf finder java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="407" lean-forward="true" selection-start-line="32" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/orf finder java" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1111" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="544">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -396,32 +429,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+        <state relative-caret-position="204">
+          <caret line="48" column="144" selection-start-line="48" selection-start-column="144" selection-end-line="48" selection-end-column="144" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4078#4079#0" expanded="true" />
             <element signature="e#4136#4137#0" expanded="true" />
           </folding>
         </state>

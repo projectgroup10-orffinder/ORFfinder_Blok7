@@ -46,7 +46,7 @@ public class orfGUI extends JFrame {
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder\\testDNATjeerd.fa";
+                fileName = "C:\\Users\\vverh\\OneDrive\\Documenten\\HAN\\Leerjaar-2-Blok-7\\ORFfinder_blok7_new_one\\ORFfinder\\testDNATjeerd.fa";
 //                fileChooser = new JFileChooser();
 //                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 //
