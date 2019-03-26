@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.*;
 
 /**
- *
+ * This class sets up the GUI and the functionality for the buttons
  */
 public class orfGUI extends JFrame {
 
@@ -40,7 +40,7 @@ public class orfGUI extends JFrame {
     private JTextArea saveResults;
 
     /**
-     *
+     * Function to convert the actionevents to methods in ORFfinder.java
      */
     public orfGUI () {
         this.setContentPane(mainPanel);
@@ -53,19 +53,16 @@ public class orfGUI extends JFrame {
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\ORFfinder\\testHashcode.fa";
-                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\\\ORFfinder\\testDNATjeerd.fa";
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\ORFfinder\\geenFasta.txt";
 
-//                fileChooser = new JFileChooser();
-//                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-//
-//                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
-//
-//                if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                    filePath.setText(fileChooser.getSelectedFile().toString());
-//                    fileName = filePath.getText();
-//                }
+                fileChooser = new JFileChooser();
+                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+
+                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    filePath.setText(fileChooser.getSelectedFile().toString());
+                    fileName = filePath.getText();
+                }
 
             }
         });
@@ -77,8 +74,10 @@ public class orfGUI extends JFrame {
         sequenceArea.setRows(10);
         sequenceArea.setLineWrap(true);
         sequenceArea.setWrapStyleWord(true);
-
         this.setContentPane(mainPanel);
+
+        //button for controlling the extension of the file (must be fasta)
+        //calls the functions for controling the format and extracting the header and DNA sequence from the input file in ORFfinder
         controlButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,10 +95,10 @@ public class orfGUI extends JFrame {
         chooseStartCodon.addItem("ATG");
         chooseStartCodon.addItem("STOP");
 
+        //button for choosing with start codon should be used for finding the ORF's
         chooseStartCodon.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 JComboBox chooseStartCodon = (JComboBox) e.getSource();
                 String selectedStart = (String) chooseStartCodon.getSelectedItem();
                 chooseStartCodon.setSelectedItem(selectedStart);
@@ -107,6 +106,9 @@ public class orfGUI extends JFrame {
         });
         this.setContentPane(mainPanel);
 
+        //button for analyzing the input sequence
+        //calls the analyze method in ORFfinder
+        //displays the number of found ORF's and a table with all the ORF information
         analyseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -115,14 +117,11 @@ public class orfGUI extends JFrame {
                     String selectedStart = (String) chooseStartCodon.getSelectedItem();
                     System.out.println(selectedStart);
                     HashMap<Integer, ArrayList<String>> resultsMap = ORFfinder.analyse(selectedStart == "ATG");
-                    //System.out.println(resultsMap);
+
                     nrFoundORFs.setText("Number of found ORF's: " + Integer.toString(resultsMap.size()));
 
                     String[] columnNames = {"Start position", "Stop position", "DNA sequence", "Aminoacid sequence"};
                     DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
-                    //resultTable.setSize(1000,50);
-
-                    //scrollTable.getViewport ().add (resultTable);
 
                     for (Object orfObj : resultsMap.values()) {
                         String ORF = String.valueOf(orfObj);
@@ -133,7 +132,6 @@ public class orfGUI extends JFrame {
 
                     }
 
-                    //scrollTable.setViewport(resultTable);
                     resultTable.setModel(tableModel);
                 } catch (NullPointerException exception) {
 
@@ -142,6 +140,7 @@ public class orfGUI extends JFrame {
         });
         this.setContentPane(mainPanel);
 
+        //button for choosing the directory in which the CSV file should be saved
         chooseDirectory.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -156,6 +155,8 @@ public class orfGUI extends JFrame {
             }
         });
 
+        //button for exporting the ORF's to a CSV file
+        //calls the export ORF to CSV in ORFfinder
         exportORFButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

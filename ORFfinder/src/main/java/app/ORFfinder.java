@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.stream.Collectors;
 
 /**
- *
+ * This class contains all the functional methods for finding the ORF's
  */
 public class ORFfinder {
 
@@ -26,6 +26,10 @@ public class ORFfinder {
     static HashMap<Integer, ArrayList<String>> resultsMap;
     private static HashMap<String, String> CodonTable = new HashMap<>();
 
+    /**
+     * Method that calls the method for the initialization of the GUI and makes the codontabel
+     * @param args
+     */
     public static void main(String[] args) {
         CodonTable=codonTable.makeCodonTable(CodonTable);
         initialiseGUI();
@@ -76,8 +80,8 @@ public class ORFfinder {
     }
 
     /**
-     *
-     * @param fileName String that
+     * Method that extracts the DNA sequence from the input file
+     * @param fileName String path to the chosen file
      * @return
      */
     public static String getSeq(String fileName) {
@@ -106,10 +110,9 @@ public class ORFfinder {
     }
 
     /**
-     * Starts analyzing given DNA code
+     * Method for analyzing given DNA code and finding the ORFs
      */
     public static HashMap analyse(boolean startIsATG){
-
         try {
 
             int DNA_Hashcode = sequence.hashCode();
@@ -137,7 +140,7 @@ public class ORFfinder {
 
     /**
      * Function to find ORFs within a DNA sequence
-     * @param sequence string containing the DNA sequence you want to
+     * @param sequence String containing the DNA sequence you want to
      * @param orfs ArrayList containing ArrayLists of integers
      * @param start starting position to start looking for ORFs in the given DNA sequence
      * @param minDistance minimum distance between starting position and stop position
@@ -172,7 +175,7 @@ public class ORFfinder {
     }
 
     /**
-     * reverses DNA to the reverse complementary sequence
+     * Method that reverses DNA to the reverse complementary sequence
      * @param input string to be reversed
      * @return returns a String that is the reversed complementary DNA sequence of the input String
      */
@@ -199,7 +202,7 @@ public class ORFfinder {
     }
 
     /**
-     * adjusts ORF start and stop possition according to their possition on reverse contemplary sequence
+     * Method that adjusts ORF start and stop possition according to their position on reverse contemplary sequence
      * @param sequenceLenght length of the DNA sequence
      * @param ORFlist list of ORFs to be adjusted
      * @return Arraylist containing arraylist with the adjusted start and stop values of the given list.
@@ -218,7 +221,7 @@ public class ORFfinder {
 
 
     /**
-     * Function to check if the found stop positions match the reading frame of the start codon and the stop codon is far enough away
+     * Method to check if the found stop positions match the reading frame of the start codon and the stop codon is far enough away
      * @param start integer with the position of the start codon
      * @param stopFurthest integer with the position of the stop codon found at the biggest position
      * @param stopMiddle integer with the position of the second furthest position
@@ -251,7 +254,7 @@ public class ORFfinder {
     }
 
     /**
-     * Adds the start and stop position of the found ORF into the given ArrayList
+     * Method that adds the start and stop position of the found ORF into the given ArrayList
      * @param start integer with the position of the start codon
      * @param stop integer with the position of the stop codon
      * @param orfs arraylist containing an arraylist with the start and stop positions of the ORFs
@@ -268,7 +271,7 @@ public class ORFfinder {
     }
 
     /**
-     * Creates a list with the DNA sequences of the ORFs
+     * Method that a list with the DNA sequences of the ORFs
      * @param orfs arraylist containing an arraylist with the start and stop positions of the ORFs
      * @param DNA string with the DNA sequence in which the ORFs are found
      * @return returns an ArrayList with the DNA sequences of the ORFs found in the DNA sequence
@@ -284,7 +287,7 @@ public class ORFfinder {
     }
 
     /**
-     * Translates an arraylist containing DNA sequences to an arraylist containing protein sequences
+     * Method that translates an arraylist containing DNA sequences to an arraylist containing protein sequences
      * @param CodonTable Hashmap containing the translation table
      * @param DNA Arraylist containing strings of DNA to be translated
      * @return Arraylsit<String> with translated protein sequences
@@ -310,7 +313,7 @@ public class ORFfinder {
     }
 
     /**
-     * fills resultsmap with found results
+     * Method that fills resultsmap with found results
      * @param proteinList Arraylist of protein strings
      * @param DNA_List Arraylist of DNA strings
      * @param startStopList Arraylist of Arraylist with the start and stop positions of the found ORFs
@@ -331,7 +334,7 @@ public class ORFfinder {
     }
 
     /**
-     *
+     * Method that exports the found ORF's to a CSV file and saves it locally on the user's computer
      * @param directory String of chosen directory
      */
     static void exportORFtoCSV(String directory) {

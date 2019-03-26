@@ -24,8 +24,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2489">
-              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="503">
+              <caret line="79" column="131" selection-start-line="79" selection-start-column="131" selection-end-line="79" selection-end-column="131" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="-106">
+              <caret line="336" column="100" selection-start-line="336" selection-start-column="100" selection-end-line="336" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,8 +105,8 @@
         <option value="$PROJECT_DIR$/src/main/java/app/makeCodonTable.java" />
         <option value="$USER_HOME$/Downloads/orf finder java" />
         <option value="$PROJECT_DIR$/src/main/java/app/codonTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.form" />
+        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
       </list>
     </option>
@@ -385,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="-106">
+          <caret line="336" column="100" selection-start-line="336" selection-start-column="100" selection-end-line="336" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -398,8 +401,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2489">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="503">
+          <caret line="79" column="131" selection-start-line="79" selection-start-column="131" selection-end-line="79" selection-end-column="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
