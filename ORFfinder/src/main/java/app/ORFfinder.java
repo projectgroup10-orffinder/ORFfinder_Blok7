@@ -4,12 +4,18 @@ package app;
  * @author: Tjeerd van der Veen & Sanne Schroduer
  */
 
+
 import javax.swing.*;
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.stream.Collectors;
 
-
+/**
+ *
+ */
 public class ORFfinder {
 
     static File outputFile;
@@ -23,47 +29,50 @@ public class ORFfinder {
     public static void main(String[] args) {
         CodonTable=codonTable.makeCodonTable(CodonTable);
         initialiseGUI();
-
-    }
-
-    static void initialiseGUI() {
-        orfGUI frame = new orfGUI();
-
-        frame.setTitle("ORF finder application");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-        frame.pack();
-        frame.setSize(1000,800);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-
-
     }
 
     /**
-     *
-     * @param fileName
+     * Method that initializes the GUI
+     */
+    static void initialiseGUI() {
+        orfGUI frame = new orfGUI();
+        frame.setTitle("ORF finder application");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setSize(1000,600);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+    /**
+     * Method that controls if the input file is fasta format
+     * @param fileName String of the path to the chosen file
      * @return
      */
-    public static String controlFormat(String fileName) {
+
+
+    public static String controlFormat(String fileName) throws NoFastaFormatException{
         String header = "";
         try {
-
             BufferedReader inFile = new BufferedReader(new FileReader(fileName));
             String lineZero = inFile.readLine();
 
             if(lineZero.startsWith(">")) {
                 header = lineZero;
                 getSeq(fileName);
+                //test
             } else {
-                //geef melding aan gebruiker
+                throw new NoFastaFormatException();
             }
 
-
         } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null,"Error: File not found.");
             e.printStackTrace();
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(null,"Error: IOException. Something went wrong while analyzing the sequence. \n Contact the system administrator.");
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(null,"Error: Something went wrong while controlling your file. \n Make sure you have uploaded a file.");
         }
     return header;
     }
@@ -76,7 +85,6 @@ public class ORFfinder {
     public static String getSeq(String fileName) {
 
         sequence = "";
-
         try {
             BufferedReader inFile = new BufferedReader(new FileReader(fileName));
             String line1 = inFile.readLine();
@@ -84,13 +92,16 @@ public class ORFfinder {
 
             while ((line = inFile.readLine()) != null) {
                 sequence += line;
-
             }
         sequence = sequence.toUpperCase();
 
         } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null,"Error: File not found.");
             e.printStackTrace();
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(null,"Error: IOException. Something went wrong while analyzing the sequence. \n Contact the system administrator.");
+            e.printStackTrace();
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         System.out.println("File read");
@@ -102,18 +113,27 @@ public class ORFfinder {
      */
     public static HashMap analyse(boolean startIsATG){
 
-        //int DNA_Hashcode = DNA.hashCode();
-        orfs = new ArrayList<>();
-        reverseORFs = new ArrayList<>();
-        orfs = findORFs(sequence, orfs,  0, 75, startIsATG);
-        String reverseSequence = reverseString(sequence);
-        reverseORFs = findORFs(reverseSequence, reverseORFs,  0, 75, startIsATG);
-        ArrayList DNA_ORF_List = getORF_DNA_Sequence(orfs, sequence);
-        DNA_ORF_List.addAll(getORF_DNA_Sequence(reverseORFs, reverseSequence));
-        ArrayList proteinList=DNAtoAA(CodonTable, DNA_ORF_List);
-        reverseORFs = adjustReverseOrfs(sequence.length(), reverseORFs);
-        orfs.addAll(reverseORFs);
-        resultsMap = fillResultsMap(proteinList, DNA_ORF_List, orfs);
+        try {
+
+            int DNA_Hashcode = sequence.hashCode();
+            System.out.println("hashcode: " + DNA_Hashcode);
+            orfs = new ArrayList<>();
+            reverseORFs = new ArrayList<>();
+
+            orfs = findORFs(sequence, orfs, 0, 75, startIsATG);
+            String reverseSequence = reverseString(sequence);
+            reverseORFs = findORFs(reverseSequence, reverseORFs, 0, 75, startIsATG);
+
+            ArrayList dnaORFlist = getORF_DNA_Sequence(orfs, sequence);
+            dnaORFlist.addAll(getORF_DNA_Sequence(reverseORFs, reverseSequence));
+
+            ArrayList proteinList = DNAtoAA(CodonTable, dnaORFlist);
+            reverseORFs = adjustReverseOrfs(sequence.length(), reverseORFs);
+            orfs.addAll(reverseORFs);
+            resultsMap = fillResultsMap(proteinList, dnaORFlist, orfs);
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(null,"Error: Something went wrong while analyzing the sequence. \n Make sure you have uploaded a file");
+        }
 
         return resultsMap;
     }
@@ -128,10 +148,12 @@ public class ORFfinder {
      * @return returns an ArrayList containing an ArrayList of the starting and stopping positions of the found ORFs
      */
     public static ArrayList findORFs(String sequence, ArrayList orfs, int start, int minDistance, boolean startIsATG){
-        int startIndex = start;
-        int[] stops = {sequence.indexOf("TAA", startIndex), sequence.indexOf("TGA", startIndex), sequence.indexOf("TAG", startIndex)};
-        System.out.println(Arrays.toString(stops));
-        while (stops[0]!=-1 && stops[1]!=-1 && stops[2]!=-1) {//checks if there are any stop codons found
+
+        int startIndex=start;
+        int[] stops={sequence.indexOf("TAA",startIndex),sequence.indexOf("TGA",startIndex),sequence.indexOf("TAG",startIndex)};
+        Arrays.sort(stops);//sort the indexes of stop codons so the lowest and highest values are identified
+
+        while(stops[0]!=-1 && stops[1]!=-1 && stops[2]!=-1) {//checks if there are any stop codons found
             startIndex = start;
             if (startIsATG) {//checks if ATG is used as the starting point
                 startIndex = sequence.indexOf("ATG", start);
@@ -139,16 +161,64 @@ public class ORFfinder {
             int[] stopsTemp = {sequence.indexOf("TAA", startIndex), sequence.indexOf("TGA", startIndex), sequence.indexOf("TAG", startIndex)};
             stops = stopsTemp;
             Arrays.sort(stops);//sort the indexes of stop codons so the lowest and highest values are identified
+
             if (!startIsATG) {//checks if ATG is not used as the starting point
                 startIndex = stops[0];
             }
             if (stops[0] != -1 && stops[1] != -1 && stops[2] != -1) {//checks if there are any stop codons found
                 checkORFLength(startIndex, stops[2], stops[1], stops[0], minDistance, sequence, orfs);//checks if the ORF is long enough and in the stop codons are in the right reading frame
+                //orfs = findORFs(sequence, orfs, start, minDistance, startIsATG);
                 start = startIndex + 1;
             }
         }
         return orfs;
     }
+
+    /**
+     * reverses DNA to the reverse complementary sequence
+     * @param input string to be reversed
+     * @return returns a String that is the reversed complementary DNA sequence of the input String
+     */
+    private static String reverseString(String input) {
+        char[] toRevert = input.toCharArray();
+        ArrayList<Character> reversedList = new ArrayList<>();
+        for (char i : toRevert){
+            char x;
+            if(i=='T'){
+                x='A';
+            }else if(i=='A'){
+                x='T';
+            }else if (i=='G'){
+                x='C';
+            }else if(i=='C'){
+                x='G';
+            }else{
+                x='N';
+            }
+            reversedList.add(x);
+        }
+        Collections.reverse(reversedList);
+        return reversedList.stream().map(String::valueOf).collect(Collectors.joining());
+    }
+
+    /**
+     * adjusts ORF start and stop possition according to their possition on reverse contemplary sequence
+     * @param sequenceLenght length of the DNA sequence
+     * @param ORFlist list of ORFs to be adjusted
+     * @return Arraylist containing arraylist with the adjusted start and stop values of the given list.
+     */
+    private static ArrayList<ArrayList<Integer>> adjustReverseOrfs(int sequenceLenght, ArrayList<ArrayList<Integer>> ORFlist){
+        for(int i=0; i<ORFlist.size(); i++){
+            int start = ORFlist.get(i).get(0)-sequenceLenght;
+            int stop = ORFlist.get(i).get(1)-sequenceLenght;
+            ArrayList<Integer> startStopList = new ArrayList<>();
+            startStopList.add(start);
+            startStopList.add(stop);
+            ORFlist.set(i, startStopList);
+        }
+        return ORFlist;
+    }
+
 
     /**
      * Function to check if the found stop positions match the reading frame of the start codon and the stop codon is far enough away
@@ -262,26 +332,23 @@ public class ORFfinder {
         return resultsMap;
     }
 
-    static void exportORFtoCSV() {
+    /**
+     *
+     * @param directory String of chosen directory
+     */
+    static void exportORFtoCSV(String directory) {
         try {
-            outputFile = new File("C:\\Users\\sschr\\OneDrive\\Documenten\\ORFfinder_foundORFs.csv");
+            System.out.println(directory);
+            String path = directory.replace("\\", "\\\\")+"\\" + "ORFresults.csv";
+            outputFile = new File(path);
             bw = new BufferedWriter(new FileWriter(outputFile));
-            bw.write("Start position"+ ", " + "Stop position"+ ","+ "DNA sequence" + ","+ "Amino acid sequence" + "\n");
-
+            bw.write("Start position"+ "," + "Stop position"+ "," + "DNA sequence" + ","+ "Amino acid sequence" + "\n");
 
             for(ArrayList value : resultsMap.values()) {
+
                 String ORF = String.join(",", value+"\n");
                 bw.write(ORF);
             }
-            //for (resultsMap.entry<Integer, Object> entry : resultsMap.entrySet()) {
-                //String key = entry.getKey();
-                //Object value = entry.getValue();
-                // ...
-
-
-                //String line = gene.getTaxID() + ", " + gene.getGeneID() + ", " + gene.getSymbol() + ", " + gene.getLocusTag()+ ", " + gene.getSynonyms()+ ", " + gene.getChromosome()+ ", " + gene.getMapLocation() + "\n";
-                //bw.write(line);
-            //}
             bw.close();
 
         } catch (FileNotFoundException e) {
@@ -290,55 +357,6 @@ public class ORFfinder {
             e.printStackTrace();
         }
 
-    }
-
-    static void exportProteinstoCSV() {
-
-    }
-
-    /**
-     * reverses DNA to the reverse complementary sequence
-     * @param input string to be reversed
-     * @return returns a String that is the reversed complementary DNA sequence of the input String
-     */
-    private static String reverseString(String input) {
-        char[] toRevert = input.toCharArray();
-        ArrayList<Character> reversedList = new ArrayList<>();
-        for (char i : toRevert){
-            char x;
-            if(i=='T'){
-                x='A';
-            }else if(i=='A'){
-                x='T';
-            }else if (i=='G'){
-                x='C';
-            }else if(i=='C'){
-                x='G';
-            }else{
-                x='N';
-            }
-            reversedList.add(x);
-        }
-        Collections.reverse(reversedList);
-        return reversedList.stream().map(String::valueOf).collect(Collectors.joining());
-    }
-
-    /**
-     * adjusts ORF start and stop possition according to their possition on reverse contemplary sequence
-     * @param sequenceLenght length of the DNA sequence
-     * @param ORFlist list of ORFs to be adjusted
-     * @return Arraylist containing arraylist with the adjusted start and stop values of the given list.
-     */
-    private static ArrayList<ArrayList<Integer>> adjustReverseOrfs(int sequenceLenght, ArrayList<ArrayList<Integer>> ORFlist){
-        for(int i=0; i<ORFlist.size(); i++){
-            int start = ORFlist.get(i).get(0)-sequenceLenght;
-            int stop = ORFlist.get(i).get(1)-sequenceLenght;
-            ArrayList<Integer> startStopList = new ArrayList<>();
-            startStopList.add(start);
-            startStopList.add(stop);
-            ORFlist.set(i, startStopList);
-        }
-        return ORFlist;
     }
 
 }
