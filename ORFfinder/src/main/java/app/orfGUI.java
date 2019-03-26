@@ -25,12 +25,7 @@ public class orfGUI extends JFrame {
     private JButton controlButton;
     private JButton analyseButton;
     private JButton exportORFButton;
-    private JButton blastButton;
-    private JLabel nrFoundProteins;
-    private JButton exportProteinsButton;
     private JLabel startLabel;
-    private JRadioButton atgButton;
-    private JRadioButton stopButton;
     private JLabel sequenceLabel;
     private JLabel headerLabel;
     private JTextArea headerArea;
@@ -41,7 +36,6 @@ public class orfGUI extends JFrame {
     private JTable resultTable;
     private JPanel ORFpanel;
     private JPanel choosePanel;
-    private JPanel proteinPanel;
     private JButton chooseDirectory;
     private JTextArea saveResults;
 
@@ -59,9 +53,9 @@ public class orfGUI extends JFrame {
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\testHashcode.fa";
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder\\testDNATjeerd.fa";
-                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\geenFasta.txt";
+                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\ORFfinder\\testHashcode.fa";
+                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\\\ORFfinder\\testDNATjeerd.fa";
+                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\Bl7_informaticaproject_ORFfinder\\ORFfinder\\geenFasta.txt";
 
 //                fileChooser = new JFileChooser();
 //                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
@@ -172,14 +166,6 @@ public class orfGUI extends JFrame {
                 } catch (NullPointerException exception) {
                     JOptionPane.showMessageDialog(mainPanel, "Error: make sure you choose a directory before you export the ORFs");
                 }
-            }
-        });
-
-
-        blastButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
             }
         });
 

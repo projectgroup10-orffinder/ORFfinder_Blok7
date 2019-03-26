@@ -49,8 +49,6 @@ public class ORFfinder {
      * @param fileName String of the path to the chosen file
      * @return
      */
-
-
     public static String controlFormat(String fileName) throws NoFastaFormatException{
         String header = "";
         try {
@@ -79,7 +77,7 @@ public class ORFfinder {
 
     /**
      *
-     * @param fileName
+     * @param fileName String that
      * @return
      */
     public static String getSeq(String fileName) {
@@ -346,7 +344,7 @@ public class ORFfinder {
 
             for(ArrayList value : resultsMap.values()) {
 
-                String ORF = String.join(",", value+"\n");
+                String ORF = String.join(",", value+"\n").replace("[", "").replace("]", "");
                 bw.write(ORF);
             }
             bw.close();
