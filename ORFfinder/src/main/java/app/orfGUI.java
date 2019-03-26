@@ -5,14 +5,16 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Field;
 import java.util.*;
-import java.util.List;
 
+/**
+ *
+ */
 public class orfGUI extends JFrame {
 
     JFileChooser fileChooser;
     static String fileName;
+    static String directory;
 
     private JPanel mainPanel;
     private JLabel fileLabel;
@@ -37,16 +39,30 @@ public class orfGUI extends JFrame {
     private JLabel nrORFs;
     private JScrollPane scrollHeader;
     private JTable resultTable;
-    private JScrollPane scrollTable;
+    private JPanel ORFpanel;
+    private JPanel choosePanel;
+    private JPanel proteinPanel;
+    private JButton chooseDirectory;
+    private JTextArea saveResults;
 
+    /**
+     *
+     */
     public orfGUI () {
         this.setContentPane(mainPanel);
+
+        saveResults.setText("If you want to save the ORF results:" +
+                "\n" + "1. Choose a directory"+
+                "\n" + "2. Click Export ORFs");
 
         //button for uploading a file by the user
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder\\testDNATjeerd.fa";
+                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\testHashcode.fa";
+                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder\\testDNATjeerd.fa";
+                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\geenFasta.txt";
+
 //                fileChooser = new JFileChooser();
 //                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 //
@@ -61,23 +77,24 @@ public class orfGUI extends JFrame {
         });
 
         this.setContentPane(mainPanel);
-        sequenceArea.setRows(3);
-        //sequenceArea.setColumns();
+
         headerArea.setLineWrap(true);
         headerArea.setWrapStyleWord(true);
-        //sequenceArea.setColumns(20);
         sequenceArea.setRows(10);
         sequenceArea.setLineWrap(true);
         sequenceArea.setWrapStyleWord(true);
 
+        this.setContentPane(mainPanel);
         controlButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                headerArea.setText(ORFfinder.controlFormat(fileName));
-
-                sequenceArea.setText(ORFfinder.getSeq(fileName));
-
-
+                try {
+                    headerArea.setText(ORFfinder.controlFormat(fileName));
+                    sequenceArea.setText(ORFfinder.getSeq(fileName));
+                } catch (Exception error) {
+                    System.out.println(error.getMessage());
+                    JOptionPane.showMessageDialog(mainPanel, "Error: This file isn't fasta format. Make sure you upload a file in fasta format.");
+                }
             }
         });
         this.setContentPane(mainPanel);
@@ -92,8 +109,6 @@ public class orfGUI extends JFrame {
                 JComboBox chooseStartCodon = (JComboBox) e.getSource();
                 String selectedStart = (String) chooseStartCodon.getSelectedItem();
                 chooseStartCodon.setSelectedItem(selectedStart);
-
-
             }
         });
         this.setContentPane(mainPanel);
@@ -101,28 +116,65 @@ public class orfGUI extends JFrame {
         analyseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String selectedStart = (String) chooseStartCodon.getSelectedItem();
-                System.out.println(selectedStart);
-                HashMap<Integer, ArrayList<String>> resultsMap = ORFfinder.analyse(selectedStart=="ATG");
-                //System.out.println(resultsMap);
-                nrFoundORFs.setText("Number of found ORF's: "+ Integer.toString(resultsMap.size()));
 
-                fillTabel(resultsMap);
+                try {
+                    String selectedStart = (String) chooseStartCodon.getSelectedItem();
+                    System.out.println(selectedStart);
+                    HashMap<Integer, ArrayList<String>> resultsMap = ORFfinder.analyse(selectedStart == "ATG");
+                    //System.out.println(resultsMap);
+                    nrFoundORFs.setText("Number of found ORF's: " + Integer.toString(resultsMap.size()));
 
+                    String[] columnNames = {"Start position", "Stop position", "DNA sequence", "Aminoacid sequence"};
+                    DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+                    //resultTable.setSize(1000,50);
 
-                //scrollTable.add(resultTable);
+                    //scrollTable.getViewport ().add (resultTable);
 
+                    for (Object orfObj : resultsMap.values()) {
+                        String ORF = String.valueOf(orfObj);
+                        String regex = "[\\[,\\]]";
+                        String[] columns = ORF.split(regex);
 
+                        tableModel.addRow(new Object[]{columns[1], columns[2], columns[3], columns[4]});
 
+                    }
+
+                    //scrollTable.setViewport(resultTable);
+                    resultTable.setModel(tableModel);
+                } catch (NullPointerException exception) {
+
+                }
             }
         });
         this.setContentPane(mainPanel);
+
+        chooseDirectory.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fileChooser = new JFileChooser();
+                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    filePath.setText(fileChooser.getSelectedFile().toString());
+                    directory = fileChooser.getSelectedFile().toString();
+                }
+            }
+        });
+
         exportORFButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ORFfinder.exportORFtoCSV();
+                try {
+                    ORFfinder.exportORFtoCSV(directory);
+                    JOptionPane.showMessageDialog(mainPanel, "A CSV file \"ORF results\" has been saved to " + directory);
+
+                } catch (NullPointerException exception) {
+                    JOptionPane.showMessageDialog(mainPanel, "Error: make sure you choose a directory before you export the ORFs");
+                }
             }
         });
+
 
         blastButton.addActionListener(new ActionListener() {
             @Override
@@ -131,32 +183,6 @@ public class orfGUI extends JFrame {
             }
         });
 
-        exportProteinsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
     }
 
-    void fillTabel(HashMap<Integer, ArrayList<String>> resultsMap) {
-
-        String[] columnNames = {"Start position", "Stop position", "DNA sequence", "Aminoacid sequence"};
-
-        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
-        tableModel.addRow(columnNames);
-        resultTable.setSize(1000,600);
-
-        for(Object orfObj : resultsMap.values()) {
-            String ORF = String.valueOf(orfObj);
-            String regex = "[\\[,\\]]";
-            String[] columns = ORF.split(regex);
-            System.out.println(columns[1]);
-            tableModel.addRow(new Object[] {columns[1], columns[2], columns[3], columns[4]});
-
-        }
-
-        resultTable.setModel(tableModel);
-
-    }
 }
