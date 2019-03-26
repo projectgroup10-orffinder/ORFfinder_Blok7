@@ -1,5 +1,9 @@
 package app;
 
+/**
+ * @author: Tjeerd van der Veen & Sanne Schroduer
+ * @date: 29-03-2019
+ */
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
