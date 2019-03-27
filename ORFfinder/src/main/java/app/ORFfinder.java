@@ -183,7 +183,7 @@ public class ORFfinder {
      * @param input string to be reversed
      * @return returns a String that is the reversed complementary DNA sequence of the input String
      */
-    private static String reverseString(String input) {
+    public static String reverseString(String input) {
         char[] toRevert = input.toCharArray();
         ArrayList<Character> reversedList = new ArrayList<>();
         for (char i : toRevert){
@@ -206,7 +206,7 @@ public class ORFfinder {
     }
 
     /**
-     * Method that adjusts ORF start and stop possition according to their position on reverse contemplary sequence
+     * Method that adjusts ORF start and stop position according to their position on reverse contemplary sequence
      * @param sequenceLenght length of the DNA sequence
      * @param ORFlist list of ORFs to be adjusted
      * @return Arraylist containing arraylist with the adjusted start and stop values of the given list.
