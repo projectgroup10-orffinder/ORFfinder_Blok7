@@ -67,14 +67,6 @@ public class orfGUI extends JFrame {
                     filePath.setText(fileChooser.getSelectedFile().toString());
                     fileName = filePath.getText();
                 }
-
-                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
-
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    filePath.setText(fileChooser.getSelectedFile().toString());
-                    fileName = filePath.getText();
-                }
-
             }
         });
 
@@ -126,7 +118,6 @@ public class orfGUI extends JFrame {
 
                 try {
                     String selectedStart = (String) chooseStartCodon.getSelectedItem();
-                    System.out.println(selectedStart);
                     HashMap<Integer, ArrayList<String>> resultsMap = ORFfinder.analyse(selectedStart == "ATG");
 
                     nrFoundORFs.setText("Number of found ORF's: " + Integer.toString(resultsMap.size()));

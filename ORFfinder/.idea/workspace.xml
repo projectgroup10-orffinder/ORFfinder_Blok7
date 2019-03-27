@@ -15,20 +15,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+            <state relative-caret-position="705">
+              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -38,14 +35,13 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4437">
-              <caret line="30" column="72" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="72" />
+            <state relative-caret-position="130">
+              <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4731#4732#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-925">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="15">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -79,6 +75,7 @@
       <find>findORFs</find>
       <find>system</find>
       <find>blastbutton</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -94,11 +91,11 @@
         <option value="$PROJECT_DIR$/src/main/java/app/makeCodonTable.java" />
         <option value="$USER_HOME$/Downloads/orf finder java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.form" />
-        <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/codonTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/app/ORFfinderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
       </list>
     </option>
   </component>
@@ -126,15 +123,17 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -148,19 +147,47 @@
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553692178187" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Mijn documenten" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -184,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ORFfinderTest.DNAtoAA">
+  <component name="RunManager" selected="Application.ORFfinder">
     <configuration name="NCBIQBlastServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.NCBIQBlastServiceDemo" />
       <module name="ORFfinder" />
@@ -228,6 +255,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="app" />
       <option name="MAIN_CLASS_NAME" value="app.ORFfinderTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,9 +278,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ORFfinder" />
         <item itemvalue="JUnit.ORFfinderTest.DNAtoAA" />
         <item itemvalue="JUnit.ORFfinderTest" />
-        <item itemvalue="Application.ORFfinder" />
         <item itemvalue="Application.NCBIQBlastServiceDemo" />
         <item itemvalue="Application.main" />
       </list>
@@ -269,6 +297,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549542971960</updated>
       <workItem from="1553087236584" duration="11052000" />
+      <workItem from="1553694333547" duration="997000" />
     </task>
     <servers />
   </component>
@@ -283,6 +312,9 @@
       <configuration name="ORFfinderTest.DNAtoAA" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="997000" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -293,20 +325,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21832669" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26770538" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26738796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,7 +346,8 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32612056" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -324,6 +356,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12885906" />
@@ -354,6 +387,9 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -383,9 +419,9 @@
     <entry file="file://$USER_HOME$/Downloads/orf finder java" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/NCBIQBlastServiceDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -393,33 +429,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-925">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -434,13 +443,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4437">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="72" />
+        <state relative-caret-position="130">
+          <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -484,7 +517,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>11</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

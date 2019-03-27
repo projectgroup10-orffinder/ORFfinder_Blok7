@@ -110,7 +110,6 @@ public class ORFfinder {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-        System.out.println("File read");
         return sequence;
     }
 
@@ -121,7 +120,6 @@ public class ORFfinder {
         try {
 
             int DNA_Hashcode = sequence.hashCode();
-            System.out.println("hashcode: " + DNA_Hashcode);
             orfs = new ArrayList<>();
             reverseORFs = new ArrayList<>();
 
@@ -344,7 +342,6 @@ public class ORFfinder {
      */
     static void exportORFtoCSV(String directory) {
         try {
-            System.out.println(directory);
             String path = directory.replace("\\", "\\\\")+"\\" + "ORFresults.csv";
             outputFile = new File(path);
             bw = new BufferedWriter(new FileWriter(outputFile));
