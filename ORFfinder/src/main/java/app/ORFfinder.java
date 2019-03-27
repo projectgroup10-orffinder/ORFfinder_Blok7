@@ -25,10 +25,12 @@ public class ORFfinder {
     private static ArrayList<ArrayList<Integer>> orfs, reverseORFs;
     static HashMap<Integer, ArrayList<String>> resultsMap;
     private static HashMap<String, String> CodonTable = new HashMap<>();
+    private static DatabaseConnection Connector = new DatabaseConnection();
 
     public static void main(String[] args) {
-        CodonTable=codonTable.makeCodonTable(CodonTable);
+        //CodonTable=codonTable.makeCodonTable(CodonTable);
         initialiseGUI();
+        DatabaseCon();
     }
 
     /**
@@ -357,6 +359,9 @@ public class ORFfinder {
             e.printStackTrace();
         }
 
-    }
 
+    }
+    static void DatabaseCon(){
+        Connector.Connection();
+    }
 }
