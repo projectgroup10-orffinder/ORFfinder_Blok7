@@ -1,12 +1,17 @@
 package app;
-
+/**
+ * @author: Tjeerd van der Veen & Sanne Schroduer
+ * @date: 29-03-2019
+ */
 import java.util.HashMap;
 
+/**
+ * This class sets up the codon tabel which is used to translate the DNA sequences to aminoacid sequences
+ */
 public class codonTable {
 
-
     /**
-     * initiates a CodonTable as hashmap
+     * Method that initiates a CodonTable as hashmap
      * @param CodonTable HashMap you want to put the codon table in (<String, String>)
      * @return returns HashMap with codons as key and ammino acid as value
      */
