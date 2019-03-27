@@ -68,6 +68,13 @@ public class orfGUI extends JFrame {
                     fileName = filePath.getText();
                 }
 
+                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    filePath.setText(fileChooser.getSelectedFile().toString());
+                    fileName = filePath.getText();
+                }
+
             }
         });
 

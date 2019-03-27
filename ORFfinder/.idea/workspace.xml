@@ -45,6 +45,7 @@
               <caret line="30" column="72" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4731#4732#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +101,11 @@
         <option value="$PROJECT_DIR$/src/test/java/app/ORFfinderTest.java" />
       </list>
     </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -262,6 +268,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549542971960</updated>
+      <workItem from="1553087236584" duration="11052000" />
     </task>
     <servers />
   </component>
@@ -295,6 +302,8 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26770538" />
@@ -305,7 +314,8 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32719547" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32612056" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,13 +380,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/1819-bi6a-eindopdracht-SanneSchroduer/src/com/company/pmGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/1819-bi6a-eindopdracht-SanneSchroduer/src/com/company/pmGUI.java" />
-    <entry file="file://$USER_HOME$/Downloads/orf finder java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="407" lean-forward="true" selection-start-line="32" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/orf finder java" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
     <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
@@ -425,6 +429,7 @@
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4731#4732#0" expanded="true" />
           </folding>
         </state>
       </provider>
