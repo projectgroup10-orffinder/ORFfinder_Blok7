@@ -58,11 +58,10 @@ public class DatabaseConnection {
                 pst2.setInt(2, startP);
                 pst2.setInt(3, stopP);
                 pst2.setString(4, aaSeq);
-                pst2.setInt(5,dnaSeq.hashCode() );
+                pst2.setInt(5,(startP+stopP+dnaSeq).hashCode() );
                 pst2.setInt(6, DNA_Hashcode);
 
                 pst2.executeUpdate();
-                System.out.println(resultsMap.get(j));
             }
         } catch (SQLIntegrityConstraintViolationException e){
             e.printStackTrace();
