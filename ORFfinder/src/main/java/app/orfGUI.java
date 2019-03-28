@@ -59,19 +59,15 @@ public class orfGUI extends JFrame {
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\testHashcode.fa";
-                //fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder\\testDNATjeerd.fa";
-                fileName = "C:\\Users\\sschr\\OneDrive\\Documenten\\Bl7_informaticaproject\\ORFfinder_blok7_new_one\\ORFfinder\\geenFasta.txt";
+                fileChooser = new JFileChooser();
+                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 
-//                fileChooser = new JFileChooser();
-//                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-//
-//                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
-//
-//                if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                    filePath.setText(fileChooser.getSelectedFile().toString());
-//                    fileName = filePath.getText();
-//                }
+                int returnVal = fileChooser.showOpenDialog(orfGUI.this);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    filePath.setText(fileChooser.getSelectedFile().toString());
+                    fileName = filePath.getText();
+                }
 
             }
         });
@@ -179,10 +175,10 @@ public class orfGUI extends JFrame {
         blastButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
             }
         });
-
     }
 
+
 }
+

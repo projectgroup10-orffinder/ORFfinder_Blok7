@@ -7,6 +7,8 @@ package app;
 
 import javax.swing.*;
 import java.io.*;
+import java.sql.Connection;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -27,10 +29,11 @@ public class ORFfinder {
     private static HashMap<String, String> CodonTable = new HashMap<>();
     private static DatabaseConnection Connector = new DatabaseConnection();
 
+    static int DNA_Hashcode;
+
     public static void main(String[] args) {
-        //CodonTable=codonTable.makeCodonTable(CodonTable);
+        CodonTable=codonTable.makeCodonTable(CodonTable);
         initialiseGUI();
-        DatabaseCon();
     }
 
     /**
@@ -115,8 +118,7 @@ public class ORFfinder {
     public static HashMap analyse(boolean startIsATG){
 
         try {
-
-            int DNA_Hashcode = sequence.hashCode();
+            DNA_Hashcode = sequence.hashCode();
             System.out.println("hashcode: " + DNA_Hashcode);
             orfs = new ArrayList<>();
             reverseORFs = new ArrayList<>();
@@ -135,9 +137,9 @@ public class ORFfinder {
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(null,"Error: Something went wrong while analyzing the sequence. \n Make sure you have uploaded a file");
         }
-
         return resultsMap;
     }
+
 
     /**
      * Function to find ORFs within a DNA sequence
@@ -330,9 +332,10 @@ public class ORFfinder {
             temp.add(proteinList.get(i));
             resultsMap.put(i+1, temp);
         }
-
+        Connector.Connection();
         return resultsMap;
     }
+
 
     /**
      *
@@ -360,8 +363,5 @@ public class ORFfinder {
         }
 
 
-    }
-    static void DatabaseCon(){
-        Connector.Connection();
     }
 }
