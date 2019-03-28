@@ -1,0 +1,32 @@
+create table blast_result
+(
+  proteinName     varchar(75)  null,
+  proteinFunction varchar(150) null,
+  E_value         varchar(10)  null,
+  blastID         int          not null
+    primary key
+);
+
+create table orf
+(
+  DNA_seq         longtext not null,
+  startPosition   int      not null,
+  stopPosition    int      not null,
+  aa_seq          longtext not null,
+  ORF_id          int auto_increment
+    primary key,
+  blast_result_fk int      null,
+  constraint orf_blast_result_blastID_fk
+    foreign key (blast_result_fk) references blast_result (blastID)
+);
+
+create table inputsequence
+(
+  DNAsequence longtext    not null,
+  hashcode    varchar(15) not null
+    primary key,
+  orf_fk      int         null,
+  constraint inputsequence_orf_ORF_id_fk
+    foreign key (orf_fk) references orf (ORF_id)
+);
+
