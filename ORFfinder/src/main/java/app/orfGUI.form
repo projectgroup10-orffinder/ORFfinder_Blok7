@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="app.orfGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="10" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="9" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="845" height="582"/>
@@ -29,13 +29,6 @@
       <hspacer id="887cc">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="20"/>
-          </grid>
-        </constraints>
-      </hspacer>
-      <hspacer id="3cec3">
-        <constraints>
-          <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="20"/>
           </grid>
         </constraints>
@@ -235,14 +228,6 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="c860a" class="javax.swing.JButton" binding="blastButton">
-            <constraints>
-              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="BLAST ORF's"/>
-            </properties>
-          </component>
         </children>
       </grid>
       <hspacer id="c7a44">
@@ -252,56 +237,6 @@
           </grid>
         </constraints>
       </hspacer>
-      <grid id="25053" binding="proteinPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-9406608"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <vspacer id="98b49">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="5"/>
-              </grid>
-            </constraints>
-          </vspacer>
-          <vspacer id="db5ef">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="5"/>
-              </grid>
-            </constraints>
-          </vspacer>
-          <hspacer id="37344">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="5" height="-1"/>
-                <preferred-size width="5" height="-1"/>
-              </grid>
-            </constraints>
-          </hspacer>
-          <hspacer id="24519">
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="5" height="-1"/>
-              </grid>
-            </constraints>
-          </hspacer>
-          <component id="76cb9" class="javax.swing.JLabel" binding="nrFoundProteins">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <foreground color="-16645630"/>
-              <text value="Number of found proteins:"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
       <component id="e566f" class="javax.swing.JLabel" binding="sequenceLabel">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
