@@ -120,7 +120,7 @@ public class orfGUI extends JFrame {
                     String selectedStart = (String) chooseStartCodon.getSelectedItem();
                     HashMap<Integer, ArrayList<String>> resultsMap = ORFfinder.analyse(selectedStart == "ATG");
 
-                    nrFoundORFs.setText("Number of found ORF's: " + Integer.toString(resultsMap.size()));
+                    nrFoundORFs.setText("Number of found ORF's: " + resultsMap.size());
 
                     String[] columnNames = {"Start position", "Stop position", "DNA sequence", "Aminoacid sequence"};
                     DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);

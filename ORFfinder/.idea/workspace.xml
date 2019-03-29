@@ -35,16 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="-582">
+              <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,19 +53,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3195">
-              <caret line="334" column="31" selection-start-line="334" selection-start-column="31" selection-end-line="334" selection-end-column="31" />
+            <state relative-caret-position="146">
+              <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
               <folding>
                 <element signature="method#getSeq#0;class#ORFfinder#0" />
                 <element signature="method#findORFs#0;class#ORFfinder#0" />
@@ -81,8 +70,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/NCBIQBlastServiceDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
@@ -110,13 +111,8 @@
       <find>system.out.println</find>
       <find>ATG_isStart</find>
       <find>findORFs</find>
-      <find>rever</find>
-      <find>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</find>
-      <find>analyse</find>
-      <find>resultsmap</find>
+      <find>blastbutton</find>
       <find>system</find>
-      <find>hashc</find>
-      <find>DNA_Ha</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,11 +132,10 @@
         <option value="$USER_HOME$/Downloads/orf finder java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.form" />
         <option value="$PROJECT_DIR$/src/main/java/app/codonTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.form" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/app/ORFfinderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java" />
       </list>
     </option>
   </component>
@@ -196,22 +191,14 @@
               <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,14 +209,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553788824083" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553842231949" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Mijn documenten" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -296,6 +280,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ORFfinder" />
+        <item itemvalue="JUnit.ORFfinderTest.DNAtoAA" />
+        <item itemvalue="JUnit.ORFfinderTest" />
         <item itemvalue="Application.NCBIQBlastServiceDemo" />
         <item itemvalue="Application.main" />
       </list>
@@ -319,8 +305,19 @@
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43144000" />
+  <component name="TestHistory">
+    <history-entry file="ORFfinderTest - 2019.03.27 at 13h 34m 32s.xml">
+      <configuration name="ORFfinderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ORFfinderTest - 2019.03.27 at 13h 35m 14s.xml">
+      <configuration name="ORFfinderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ORFfinderTest_DNAtoAA - 2019.03.27 at 13h 53m 23s.xml">
+      <configuration name="ORFfinderTest.DNAtoAA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ORFfinderTest_DNAtoAA - 2019.03.27 at 14h 23m 12s.xml">
+      <configuration name="ORFfinderTest.DNAtoAA" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +332,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22629482" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -345,9 +342,9 @@
       <window_info id="DB Browser" order="7" />
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32891247" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28101644" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892906" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26770538" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -437,295 +434,9 @@
     <entry file="file://$USER_HOME$/Downloads/orf finder java" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
-    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/NCBIQBlastServiceDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d95e3ae5-b830-44c1-8167-59d44178a8ac/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/NoFastaFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ORFfinder.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/77a78b2b-222b-42f6-9078-04036be0fcf3/console.sql" />
-    <entry file="uml://DATABASE/77a78b2b-222b-42f6-9078-04036be0fcf3">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>77a78b2b-222b-42f6-9078-04036be0fcf3</OriginalElement>
-          <nodes>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.notification_alert</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.PARTITIONS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.care_setting</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.test_order</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.SCHEMATA</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_TRX</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_LOCK_WAITS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.form</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.program</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_proposal</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.formentry_xsn</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_class</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.metadatasharing_exported_package</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.drug</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.visit</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.relationship</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_name_tag</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.xforms_xform</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.ROUTINES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_FIELDS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_reference_term_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.clob_datatype_storage</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.notification_template</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_reference_source</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_TABLES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.TABLE_CONSTRAINTS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.order_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.formentry_error</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_answer</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.scheduler_task_config</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_INDEX_CACHE</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.encounter</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.drug_ingredient</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.COLLATION_CHARACTER_SET_APPLICABILITY</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.xforms_person_repeat_attribute</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.provider_attribute_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.patient_state</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person_address</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.order_frequency</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.relationship_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.COLLATIONS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.hl7_in_archive</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:owe7_pg10.blast_result</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.location_tag</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.COLUMN_PRIVILEGES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.hl7_source</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.TABLES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.user_role</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_BUFFER_PAGE</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.liquibasechangeloglock</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_stop_word</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_reference_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person_attribute_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.metadatasharing_imported_package_item</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.KEY_COLUMN_USAGE</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.lookup</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.role</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.TABLESPACES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_BUFFER_PAGE_LRU</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.obs</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.PROFILING</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_map_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.cohort_member</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_datatype</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_INDEX_TABLE</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.liquibasechangelog</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.COLUMNS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.visit_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.active_list</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_VIRTUAL</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.active_list_problem</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMPMEM_RESET</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.patient_identifier_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.formentry_queue</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.STATISTICS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.location</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.reporting_report_design_resource</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.logic_rule_token</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.logic_rule_token_tag</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.encounter_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.REFERENTIAL_CONSTRAINTS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.metadatasharing_imported_item</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.active_list_allergy</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.PARAMETERS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.leuk</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_TABLESPACES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_complex</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.SCHEMA_PRIVILEGES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.TRIGGERS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_state_conversion</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.patient</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_TABLESTATS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.location_tag_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.formentry_archive</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.encounter_provider</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.field_answer</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_INDEXES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_name_tag_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.piep</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_FOREIGN_COLS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.visit_attribute_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.metadatasharing_imported_package</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMP_PER_INDEX</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_proposal_tag_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.reporting_report_request</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_CONFIG</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:owe7_pg10.orf</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.program_workflow_state</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.role_role</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.hl7_in_error</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.report_schema_xml</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.dataintegrity_integrity_checks</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person_attribute</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.htmlformentry_html_form</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.EVENTS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.GLOBAL_STATUS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_BUFFER_POOL_STATS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.docent</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_set</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.OPTIMIZER_TRACE</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.CHARACTER_SETS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.patient_program</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.logic_token_registration</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.SESSION_VARIABLES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.visit_attribute</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_DATAFILES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person_name</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_name</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_FOREIGN</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.active_list_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.ENGINES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.global_property</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.provider_attribute</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.logic_rule_definition</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.person_merge_log</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.PROCESSLIST</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.form_field</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.orders</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.user_property</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_DELETED</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.report_object</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.drug_order</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.xforms_medical_history_field</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.GLOBAL_VARIABLES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.privilege</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.program_workflow</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.student</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.patient_identifier</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_METRICS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.drug_reference_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.cohort</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.field_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_numeric</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.PLUGINS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:bioinfadmin.klas</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.encounter_role</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_TEMP_TABLE_INFO</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.notification_alert_recipient</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.FILES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.reporting_report_design</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.note</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_reference_term</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_SYS_COLUMNS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.logic_token_registration_tag</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMP</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.role_privilege</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.location_attribute_type</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.TABLE_PRIVILEGES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.hl7_in_queue</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_BEING_DELETED</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:owe7_pg10.inputsequence</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.location_attribute</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.order_type_class_map</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.serialized_object</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.form_resource</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.concept_description</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.scheduler_task_config_property</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.USER_PRIVILEGES</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.users</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMP_PER_INDEX_RESET</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.SESSION_STATUS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMP_RESET</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_LOCKS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.tribe</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.VIEWS</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_FT_DEFAULT_STOPWORD</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.VIEW:information_schema.INNODB_CMPMEM</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.provider</node>
-            <node x="" y="">77a78b2b-222b-42f6-9078-04036be0fcf3.TABLE:mrs.field</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.20000000000000015" x="1929.0" y="3942.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/77a78b2b-222b-42f6-9078-04036be0fcf3.SCHEMA:owe7_pg10">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>77a78b2b-222b-42f6-9078-04036be0fcf3.SCHEMA:owe7_pg10</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="107.0" y="238.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testDNATjeerd.fa">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testDNA.fa">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3195">
-          <caret line="334" column="31" selection-start-line="334" selection-start-column="31" selection-end-line="334" selection-end-column="31" />
-          <folding>
-            <element signature="method#getSeq#0;class#ORFfinder#0" />
-            <element signature="method#findORFs#0;class#ORFfinder#0" />
-            <element signature="method#reverseString#0;class#ORFfinder#0" />
-            <element signature="method#adjustReverseOrfs#0;class#ORFfinder#0" />
-            <element signature="method#checkORFLength#0;class#ORFfinder#0" />
-            <element signature="method#fillORFList#0;class#ORFfinder#0" />
-            <element signature="method#getORF_DNA_Sequence#0;class#ORFfinder#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
+    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -744,6 +455,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/NCBIQBlastServiceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-582">
+          <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
