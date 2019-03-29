@@ -35,14 +35,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-582">
-              <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -53,10 +55,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
+            <state relative-caret-position="-585">
+              <caret line="127" column="37" lean-forward="true" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
               <folding>
                 <element signature="method#getSeq#0;class#ORFfinder#0" />
                 <element signature="method#findORFs#0;class#ORFfinder#0" />
@@ -70,23 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/NCBIQBlastServiceDemo.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+            <state relative-caret-position="220">
+              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,8 +133,9 @@
         <option value="$PROJECT_DIR$/src/main/java/app/codonTable.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/app/ORFfinderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/orfGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/ORFfinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java" />
       </list>
     </option>
   </component>
@@ -191,14 +191,22 @@
               <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ORFfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="ORFfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,6 +217,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553842231949" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -280,8 +289,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ORFfinder" />
-        <item itemvalue="JUnit.ORFfinderTest.DNAtoAA" />
-        <item itemvalue="JUnit.ORFfinderTest" />
         <item itemvalue="Application.NCBIQBlastServiceDemo" />
         <item itemvalue="Application.main" />
       </list>
@@ -319,6 +326,9 @@
       <configuration name="ORFfinderTest.DNAtoAA" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1166000" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -329,10 +339,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22629482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -343,7 +353,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26770538" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28101644" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -434,30 +444,13 @@
     <entry file="file://$USER_HOME$/Downloads/orf finder java" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.form" />
     <entry file="file://$PROJECT_DIR$/../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
-    <entry file="file://$PROJECT_DIR$/../../Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/Main.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/Bl6_Afvink6/src/com/company/VirusGUI.java" />
+    <entry file="file://$USER_HOME$/Blok 6/Bl6_Inf/src/com/company/pmGUI.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/codonTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -474,20 +467,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/ORFfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="107" column="140" selection-start-line="107" selection-start-column="134" selection-end-line="107" selection-end-column="140" />
+        <state relative-caret-position="-585">
+          <caret line="127" column="37" lean-forward="true" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#getSeq#0;class#ORFfinder#0" />
+            <element signature="method#findORFs#0;class#ORFfinder#0" />
+            <element signature="method#reverseString#0;class#ORFfinder#0" />
+            <element signature="method#adjustReverseOrfs#0;class#ORFfinder#0" />
+            <element signature="method#checkORFLength#0;class#ORFfinder#0" />
+            <element signature="method#fillORFList#0;class#ORFfinder#0" />
+            <element signature="method#getORF_DNA_Sequence#0;class#ORFfinder#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/orfGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-582">
-          <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
+        <state relative-caret-position="220">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

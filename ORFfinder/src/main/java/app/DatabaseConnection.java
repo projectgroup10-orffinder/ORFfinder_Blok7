@@ -28,6 +28,7 @@ public class DatabaseConnection {
      * inserts the information into the tables: "orf" and "inputsequence"
      */
     public void Connection(){
+        System.out.println("Starting upload.");
         try(Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://hannl-hlo-bioinformatica-mysqlsrv.mysql.database.azure.com:3306/owe7_pg10" +
                         "?useUnicode=true&useJDBCCompliantTimezoneShift=true&" +
@@ -43,7 +44,7 @@ public class DatabaseConnection {
             pst3.executeUpdate();
 
             for (int j=0 ; j<resultsMap.values().size() ; j++){
-
+                System.out.println(resultsMap.get(j+1));
                 ArrayList<String> resultValue= resultsMap.get(j+1);
 
                 startP = Integer.parseInt(resultValue.get(0));
@@ -63,8 +64,9 @@ public class DatabaseConnection {
 
                 pst2.executeUpdate();
             }
+            System.out.println("Update succesfull.");
         } catch (SQLIntegrityConstraintViolationException e){
-            e.printStackTrace();
+            System.out.println("Data already exists in database, abborting upload.");
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -124,7 +124,7 @@ public class ORFfinder {
     public static HashMap analyse(boolean startIsATG){
         try {
 
-            int DNA_Hashcode = sequence.hashCode();
+            DNA_Hashcode = sequence.hashCode();
             orfs = new ArrayList<>();
             reverseORFs = new ArrayList<>();
 
