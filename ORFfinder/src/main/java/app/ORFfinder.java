@@ -120,7 +120,6 @@ public class ORFfinder {
         try {
 
             int DNA_Hashcode = sequence.hashCode();
-            System.out.println("hashcode: " + DNA_Hashcode);
             orfs = new ArrayList<>();
             reverseORFs = new ArrayList<>();
 
@@ -333,7 +332,6 @@ public class ORFfinder {
             temp.add(proteinList.get(i));
             resultsMap.put(i+1, temp);
         }
-
         return resultsMap;
     }
 
@@ -344,7 +342,6 @@ public class ORFfinder {
      */
     static void exportORFtoCSV(String directory) {
         try {
-            System.out.println(directory);
             String path = directory.replace("\\", "\\\\")+"\\" + "ORFresults.csv";
             outputFile = new File(path);
             bw = new BufferedWriter(new FileWriter(outputFile));
